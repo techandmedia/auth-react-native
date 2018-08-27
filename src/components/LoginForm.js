@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 import { View, Text, TextInput } from "react-native";
 import styled from "styled-components";
-import { Button, Card, CardSection } from "./common";
+import { Button, Card, CardSection, Input } from "./common";
 
 export default class LoginForm extends Component {
+  state = { text: "" };
+
   render() {
     return (
       <Card>
         <CardSection>
-        <StyledTextInput underlineColorAndroid="#fff"/>
+          <Input
+            value={this.state.text}
+            onChangeText={text => this.setState({ text })}
+            underlineColorAndroid="#fff"
+          />
         </CardSection>
 
         <CardSection>
@@ -18,16 +24,8 @@ export default class LoginForm extends Component {
         <CardSection>
           <Button loginText="Log Me in" />
         </CardSection>
-
       </Card>
     );
   }
 }
 
-const StyledTextInput = styled.TextInput`
-  width: auto;
-  padding-top: -2px;
-  padding-bottom: -2px;
-  background-color: #fff;
-  text-decoration-line: none;
-`;

@@ -18,9 +18,6 @@ const StyledButton = styled.TouchableOpacity`
   border-radius: 5;
   border-width: 1;
   border-color: #007aff;
-  ${'' /* margin-left: 5;
-  margin-right: 5; */}
-  ${'' /* margin: 5px; */}
 `
 const StyledText = styled.Text`
   align-self: center;
