@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, View } from 'react-native';
+import styled from 'styled-components';
 import firebase from "firebase";
 import { Header } from "./components/common";
 import LoginForm from "./components/LoginForm";
@@ -8,10 +8,12 @@ export default class App extends Component {
   
   render() {
     return (
-      <View>
+      <StyledView>
         <Header headerText="Authentication" />
         <LoginForm />
-      </View>
+      </StyledView>
     );
   }
 }
+
+const StyledView = styled.View``

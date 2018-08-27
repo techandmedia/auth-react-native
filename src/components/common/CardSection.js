@@ -10,7 +10,7 @@ const CardSection = (props) => {
 };
 
 const StyledCardSection = styled.View`
-  border-bottom-width: 1;
+  border-bottom-width: 1px;
   padding: 5px;
   background-color: #fff;
   justify-content: flex-start;

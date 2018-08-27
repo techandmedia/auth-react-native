@@ -12,16 +12,10 @@ const Card = (props) => {
 const StyledView = styled.View`
   border-width: 1;
   border-radius: 2;
-  border-color: red;
+  border-color: #ddd;
   border-bottom-width: 0;
-  shadow-color: orange;
-  shadow-offset: {width: 10px, height: 2px};
-  shadow-opacity: 0.8;
-  shadow-radius: 2;
-  elevation: 1;
-  margin-left: 5;
-  margin-right: 5;
-  margin-top: 10;
+  box-shadow: 2px 12px #000;
+  margin: 5px;
 `
 
 export { Card };

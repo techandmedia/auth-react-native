@@ -15,9 +15,7 @@ const StyledHeader = styled.View`
   align-items: center;
   height: 40;
   padding: 5px 0;
-  shadow-color: #000;
-  shadow-offset: { width: 0, height: 2 };
-  shadow-opacity: 0.2;
+  box-shadow: 2px 2px #000;
   elevation: 2;
   position: relative;
 `
