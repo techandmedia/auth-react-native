@@ -1,30 +1,28 @@
 import React from 'react';
-import { View } from 'react-native';
+import styled from 'styled-components';
 
 const Card = (props) => {
   return (
-    <View style={styles.containerStyle}>
+    <StyledView>
       {props.children}
-    </View>
+    </StyledView>
   );
 };
 
-const styles = {
-  containerStyle: {
-    borderWidth: 1,
-    borderRadius: 2,
-    borderColor: '#ddd',
-    borderBottomWidth: 0,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 2,
-    elevation: 1,
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 10
-  }
-};
+const StyledView = styled.View`
+  border-width: 1;
+  border-radius: 2;
+  border-color: red;
+  border-bottom-width: 0;
+  shadow-color: orange;
+  shadow-offset: {width: 10px, height: 2px};
+  shadow-opacity: 0.8;
+  shadow-radius: 2;
+  elevation: 1;
+  margin-left: 5;
+  margin-right: 5;
+  margin-top: 10;
+`
 
 export { Card };
 // export default Card;

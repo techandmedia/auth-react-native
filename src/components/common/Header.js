@@ -1,34 +1,29 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import styled from 'styled-components';
 
 const Header = (props) => {
-  const { textStyle, viewStyle } = styles;
-
   return (
-    <View style={viewStyle}>
-      <Text style={textStyle}>{props.headerText}</Text>
-    </View>
+    <StyledHeader>
+      <StyledText>{props.headerText}</StyledText>
+    </StyledHeader>
   );
 };
 
-const styles = {
-  viewStyle: {
-    backgroundColor: '#F8F8F8',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 40,
-    paddingTop: 5,
-    paddingBottom: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    elevation: 2,
-    position: 'relative'
-  },
-  textStyle: {
-    fontSize: 20
-  }
-};
+const StyledHeader = styled.View`
+  background-color: #f8f8f8;
+  justify-content: center;
+  align-items: center;
+  height: 40;
+  padding: 5px 0;
+  shadow-color: #000;
+  shadow-offset: { width: 0, height: 2 };
+  shadow-opacity: 0.2;
+  elevation: 2;
+  position: relative;
+`
+const StyledText = styled.Text`
+  font-size: 20;
+`
 
 export { Header };
 
