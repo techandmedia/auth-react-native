@@ -4,16 +4,17 @@ import styled from "styled-components";
 import { Button, Card, CardSection, Input } from "./common";
 
 export default class LoginForm extends Component {
-  state = { text: "" };
+  state = { email: "" };
 
   render() {
     return (
       <Card>
         <CardSection>
           <Input
-            value={this.state.text}
-            onChangeText={text => this.setState({ text })}
-            underlineColorAndroid="#fff"
+            placeholder="user@email.com"
+            label="Email:"
+            value={this.state.email}
+            onChangeEmail={email => this.setState({ email })}
           />
         </CardSection>
 
@@ -22,7 +23,7 @@ export default class LoginForm extends Component {
         </CardSection>
 
         <CardSection>
-          <Button loginText="Log Me in" />
+          <Button loginText="Log Me In" />
         </CardSection>
       </Card>
     );
