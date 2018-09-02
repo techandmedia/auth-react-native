@@ -16,6 +16,7 @@ const StyledView = styled.View`
   border-bottom-width: 0;
   box-shadow: 2px 12px #000;
   margin: 5px;
+  background-color: #fff2fd;
 `
 
 export { Card };

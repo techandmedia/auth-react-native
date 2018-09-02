@@ -5,7 +5,7 @@ const Button = (props) => {
   return (
     <StyledButton>
       <StyledText>
-        {props.loginText}
+        {props.buttonText}
       </StyledText>
     </StyledButton>
   );
@@ -14,14 +14,14 @@ const Button = (props) => {
 const StyledButton = styled.TouchableOpacity`
   flex: 1;
   align-self: stretch;
-  background-color: #fff;
+  background-color: #041006;
   border-radius: 5;
   border-width: 1;
-  border-color: #007aff;
+  border-color: #fff2fd;
 `
 const StyledText = styled.Text`
   align-self: center;
-  color: #007aff;
+  color: #fff2fd;
   font-size: 16;
   font-weight: 600;
   padding-top: 10;

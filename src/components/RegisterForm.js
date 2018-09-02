@@ -1,34 +1,15 @@
 import React, { Component } from "react";
-import firebase from "firebase";
+import firebase from 'firebase';
 import styled from "styled-components";
 import { Button, Card, CardSection, Input } from "./common";
 
 export default class LoginForm extends Component {
-  state = { email: "", password: "", error: "" };
+  state = { email: "", password: "" };
 
-  onLogin() {
+  onButtonPress() {
     const { email, password } = this.state;
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(email, password)
-      .catch(() => {
-        firebase
-          .auth()
-          .createUserWithEmailAndPassword(email, password)
-          .catch(() => {
-            this.setState({ error: "Authentication Failed!" });
-          });
-      });
-  }
 
-  onRegister() {
-    const { email, password } = this.state;
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .catch(() => {
-        this.setState({ error: "Authentication Failed!" });
-      });
+    firebase.auth().createUserWithEmailAndPassword(email, password);
   }
 
   render() {
@@ -54,10 +35,7 @@ export default class LoginForm extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onPress={this.onLogin.bind(this)} buttonText="Log Me In" />
-        </CardSection>
-        <CardSection>
-          <Button onPress={this.onRegister.bind(this)} buttonText="Register" />
+          <Button onPress={this.onButtonPress.bind(this)} loginText="Register" />
         </CardSection>
       </Card>
     );
