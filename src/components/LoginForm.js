@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import firebase from "firebase";
+import Firebase from "../config/Firebase";
 import styled from "styled-components";
 import { Button, Card, CardSection, Input } from "./common";
 
@@ -8,11 +8,11 @@ export default class LoginForm extends Component {
 
   onLogin() {
     const { email, password } = this.state;
-    firebase
+    Firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch(() => {
-        firebase
+        Firebase
           .auth()
           .createUserWithEmailAndPassword(email, password)
           .catch(() => {
@@ -23,7 +23,7 @@ export default class LoginForm extends Component {
 
   onRegister() {
     const { email, password } = this.state;
-    firebase
+    Firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(() => {

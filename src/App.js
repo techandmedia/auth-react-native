@@ -1,22 +1,15 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import firebase from "firebase";
+import Firebase from "./config/Firebase";
 import { Button, Card, CardSection, Header } from "./components/common";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 
-const keys = require("./config/Keys");
+// const keys = require("./config/Firebase");
 
 export default class App extends Component {
-  componentDidMount() {
-    firebase.initializeApp({
-      apiKey: keys.apiKey,
-      authDomain: keys.authDomain,
-      databaseURL: keys.databaseURL,
-      projectId: keys.projectId,
-      storageBucket: keys.storageBucket,
-      messagingSenderId: keys.messagingSenderId
-    });
+  componentWillMount() {
+    Firebase;
   }
 
   render() {
